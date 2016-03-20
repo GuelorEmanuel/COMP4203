@@ -14,6 +14,7 @@ public class WifiDataNetwork implements Comparable<WifiDataNetwork>, Parcelable 
     private int frequency;
     private int level;
     private long timestamp;
+    private String securityKey;
 
     public WifiDataNetwork(ScanResult result) { //@TODO if need to read more stuff lon into ScanResult
         bssid = result.BSSID;

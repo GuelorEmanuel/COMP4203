@@ -99,10 +99,17 @@ public class MainActivity extends AppCompatActivity {
                 bssidText.setText(getResources().getString(R.string.bssid_text));
                 bssidText.setTypeface(null, Typeface.BOLD);
 
+                TextView securityKey = new TextView(this);
+                securityKey.setText("capabilities");
+                securityKey.setTypeface(null, Typeface.BOLD);
+
                 tableRowHeader.addView(ssidText);
                 tableRowHeader.addView(bssidText);
                 tableRowHeader.addView(chText);
                 tableRowHeader.addView(rxText);
+                tableRowHeader.addView(securityKey);
+
+
             } else {
                 tableRowHeader.addView(ssidText);
                 tableRowHeader.addView(chText);
@@ -122,6 +129,9 @@ public class MainActivity extends AppCompatActivity {
                 TextView rxVal = new TextView(this);
                 rxVal.setText(String.valueOf(net.getLevel()));
 
+                TextView securityKeyVal = new TextView(this);
+                securityKeyVal.setText(String.valueOf(net.getCapabilities()));
+
                 TableRow tableRow = new TableRow(this);
                 tableRow.setLayoutParams(rowParams);
 
@@ -135,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                     tableRow.addView(bssidVal);
                     tableRow.addView(chVal);
                     tableRow.addView(rxVal);
+                    tableRow.addView(securityKeyVal);
                 } else {
                     tableRow.addView(ssidVal);
                     tableRow.addView(chVal);
