@@ -129,8 +129,15 @@ public class MainActivity extends AppCompatActivity {
                 TextView rxVal = new TextView(this);
                 rxVal.setText(String.valueOf(net.getLevel()));
 
+                /* This is where I want to make changes */
                 TextView securityKeyVal = new TextView(this);
-                securityKeyVal.setText(String.valueOf(net.getCapabilities()));
+
+                String   Capabilities = net.getCapabilities();
+                String[] splitIt      = Capabilities.split("-");
+
+                securityKeyVal.setText(String.valueOf(splitIt[0]));
+
+                System.out.println("splitIt[1] " + splitIt[0]);
 
                 TableRow tableRow = new TableRow(this);
                 tableRow.setLayoutParams(rowParams);
