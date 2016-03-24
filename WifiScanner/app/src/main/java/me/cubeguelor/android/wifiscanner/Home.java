@@ -29,7 +29,8 @@ public class Home extends AppCompatActivity {
         mHeatmapBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent heatMapIntent = new Intent(Home.this, HeatMapActivity.class);
+                startActivity(heatMapIntent);
             }
         });
     }

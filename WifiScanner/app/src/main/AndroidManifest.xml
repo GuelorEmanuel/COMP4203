@@ -34,8 +34,6 @@
         </activity>
         <activity android:name=".HeatMapActivity">
         </activity>
-        <activity android:name=".BaseMapActivity">
-        </activity>
     </application>
 
 </manifest>
