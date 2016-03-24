@@ -7,4 +7,7 @@
     <string name="rx_text">Rx</string>
     <string name="ch_text">Ch</string>
     <string name="freq_text">freq</string>
+    <string name="scanNetwork">Scan Network</string>
+    <string name="heatMap">Heatmap</string>
+    <string name="home_title">Wifi Scanner</string>
 </resources>

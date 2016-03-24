@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -22,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     private final String TAG = "MainActivity";
     private WifiData mWifiData;
-
     @SuppressWarnings("deprecation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
                 securityKeyVal.setText(String.valueOf(splitIt[0]));
 
-                System.out.println("splitIt[1] " + splitIt[0]);
+                System.out.println("splitIt[0] " + splitIt[0]);
 
                 TableRow tableRow = new TableRow(this);
                 tableRow.setLayoutParams(rowParams);
@@ -176,11 +176,8 @@ public class MainActivity extends AppCompatActivity {
 
             if (data != null) {
                 mWifiData = data;
-                System.out.println("YESSSSS!!");
-
                 plotData();
             }else {
-                System.out.println("FUCKKKKKKKK!!");
             }
         }
 

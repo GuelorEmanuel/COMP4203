@@ -38,8 +38,6 @@ public class WifiService extends Service {
      */
     @Override
     public void onCreate() {
-        System.out.println("CATTTTT");
-
         mWifiData = new WifiData();
         mWifiManager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
         mScheduler = Executors.newScheduledThreadPool(1);
@@ -75,7 +73,6 @@ public class WifiService extends Service {
         public void run() {
             if (mWifiManager.isWifiEnabled()) {
                 // get networks
-                System.out.println("INE THE WIFI SERVICE SCAN>>>>>>>>>");
                 List<ScanResult> mResults = mWifiManager.getScanResults();
                 Log.d(TAG, "New scan result: (" + mResults.size() + ") networks found");
                 // store networks
